@@ -33,3 +33,6 @@
 
 # PPM
 *.ppm
+
+#DB files
+*.db*
