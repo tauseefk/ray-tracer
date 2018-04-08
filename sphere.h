@@ -15,7 +15,7 @@ public:
 
 /**
  * Dot product of a ray from a point on the sphere to it's center would be the
- * square of the circle's radius dot.
+ * square of the circle's radius.
  * ((A-C + t*B), (A-C + t*B)) - R*R = 0;
  * t*t*dot(B, B) + 2*t*dot((A-C), B) + dot ((A-C), (A-C)) - R*R = 0;
  */

@@ -8,6 +8,11 @@ all:
 
 OutputFile:all
 	./$(APPNAME).o > output.ppm
+	osascript -e 'display notification "Finished running!" with title "Ray Tracer"'
 
 Output:all
 	./$(APPNAME).o
+	osascript -e 'display notification "Finished running!" with title "Ray Tracer"'
+
+format:
+	clang-format -i -style=file *.cpp *.h
