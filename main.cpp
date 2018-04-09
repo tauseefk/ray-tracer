@@ -26,7 +26,7 @@ vec3 color(const ray& r, hitable* world, int depth) {
   }
 }
 
-// XXX:TODO modify to pass const references instead of values
+// XXX:TODO modify to pass const references instead of values.
 void cal_img_part(const int p, const int parts, const int nx, const int ny,
                   const int ns, hitable* world, camera cam, float ray_v,
                   std::string* img_parts) {
