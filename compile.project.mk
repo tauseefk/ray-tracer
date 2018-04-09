@@ -4,7 +4,7 @@ ifndef APPNAME
 endif
 
 all:
-	g++ -std=c++11 main.cpp -o $(APPNAME).o
+	g++ -std=c++11 main.cpp -o $(APPNAME).o -pthread
 
 OutputFile:all
 	./$(APPNAME).o > output.ppm
