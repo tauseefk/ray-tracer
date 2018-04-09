@@ -26,6 +26,7 @@ vec3 color(const ray& r, hitable* world, int depth) {
   }
 }
 
+// XXX:TODO modify to pass const references instead of values.
 void cal_img_part(const int p, const int parts, const int nx, const int ny,
                   const int ns, hitable* world, camera cam, float ray_v,
                   std::string* img_parts) {
@@ -97,9 +98,8 @@ int main() {
   std::vector<std::thread> th;
 
   // XXX:TODO create a thread pool and assign parts instead of deciding upfront
-  for (int i = 0; i < parts;
-       i++) { // can't spin the max number of threads coz the
-              // main process is gonna use one
+  for (int i = 0; i < parts; i++) { // can't spin the max number of threads coz
+                                    // the main process is gonna use one
     th.push_back(std::thread(cal_img_part, i, parts, nx, ny, ns, world, cam,
                              ((i + 1) * ny / parts) - 1, std::ref(img_parts)));
   }
